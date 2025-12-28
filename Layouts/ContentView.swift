@@ -13,6 +13,7 @@ struct ContentView: View {
     //    ZStack {
       //      Color.skyBlue
 //                .ignoresSafeArea()
+        GeometryReader { geometry in
             VStack {
 /*                Text("You Have Skills!")
                     .font(.largeTitle)
@@ -33,6 +34,13 @@ struct ContentView: View {
                 //              .border(.orange, width: 2)
                     .padding()
                 Spacer()
+                Divider()
+                    .padding()
+                    .background(.black)
+                    .frame(width: 150.0)
+                Rectangle()
+                    .fill(.indigo)
+                    .frame(width: geometry.size.width * 2/3 , height: 1)
                 HStack {
                     Button("Awesome") {
                         messageString = "You are Awesome!"
@@ -54,6 +62,8 @@ struct ContentView: View {
       //          )
   //      }
         //       .padding()
+
+        }
     }
 }
 
