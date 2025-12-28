@@ -13,16 +13,17 @@ struct ContentView: View {
     //    ZStack {
       //      Color.skyBlue
 //                .ignoresSafeArea()
-        GeometryReader { geometry in
+//        GeometryReader { geometry in
             VStack {
-/*                Text("You Have Skills!")
+                Text("Awesome!")
                     .font(.largeTitle)
                     .fontWeight(.black)
-                    .foregroundStyle(.goldBC)
+                    .foregroundStyle(.white)
                     .padding()
-                    .background(Color("Maroon-BC"))
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
-  */              Spacer()
+                    .frame(maxWidth: .infinity)
+                    .background(.indigo)
+//                    .clipShape(RoundedRectangle(cornerRadius: 15))
+              Spacer()
                 Text(messageString)
                     .font(.largeTitle)
                     .fontWeight(.heavy)
@@ -40,7 +41,8 @@ struct ContentView: View {
                     .frame(width: 150.0)
                 Rectangle()
                     .fill(.indigo)
-                    .frame(width: geometry.size.width * 2/3 , height: 1)
+                    .frame(width: 150.0, height: 1)
+//                    .frame(width: geometry.size.width * 2/3 , height: 1)
                 HStack {
                     Button("Awesome") {
                         messageString = "You are Awesome!"
@@ -49,10 +51,13 @@ struct ContentView: View {
                     Button("Great") {
                         messageString = "You are Great!"
                     }
-                }
+                 }
                 .buttonStyle(.borderedProminent)
-                //          .border(.purple, width: 2)
                 .padding()
+                //          .border(.purple, width: 2)
+                Rectangle()
+                    .frame(height:0)
+                    .background(.indigo)
                 //               .font(.title2)
                 //             .background(.blue)
             }
@@ -65,7 +70,7 @@ struct ContentView: View {
 
         }
     }
-}
+//}
 
 #Preview {
     ContentView()
